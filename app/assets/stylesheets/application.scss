@@ -1,7 +1,14 @@
 /*
  *= require_self
  */
-@import 'normalize';
-@import "global.css.scss";
-@import "docs.scss";
-@import "welcome.scss";
+// @import 'normalize.css.scss';
+@import 'bulma/bulma';
+// @import "global.css.scss";
+// @import "docs.scss";
+// @import "welcome.scss";
+
+// html, body, #root {
+//   background-image: image('gamer.jpg');
+//   background-position: center;
+//
+// }

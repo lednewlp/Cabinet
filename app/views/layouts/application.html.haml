@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %title FileCabinet | Your life's work!
+    = stylesheet_link_tag   'application', media: 'all'
+    = javascript_pack_tag 'application'
+    = csrf_meta_tags
+    = csp_meta_tag
+
+  %body
+    .navbar.is-info
+      .navbar-brand
+        = link_to "FileCabinet", root_path, class: 'navbar-item'
+      .navbar-menu
+        .navbar-end
+          - if user_signed_in?
+            = link_to "Create Doc", new_doc_path, class: 'navbar-item'
+            = link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'navbar-item'
+
+          -else
+            = link_to "Log In", new_user_session_path, class: 'navbar-item'
+
+
+
+
+    %p.notice= notice
+    %p.alert= alert
+
+  = yield

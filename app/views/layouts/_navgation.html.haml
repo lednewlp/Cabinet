@@ -1,0 +1,11 @@
+-# .navbar.is-info
+-#   .navbar-brand
+-#     = link_to "FileCabinet", root_path, class: 'navbar-item'
+-#   .navbar-menu
+-#     .navbar-end
+-#       - if user_signed_in?
+-#         = link_to "Create Doc", new_doc_path, class: 'navbar-item'
+-#         = link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'navbar-item'
+-#
+-#       -else
+-#         = link_to "Log In", new_user_session_path, class: 'navbar-item'
